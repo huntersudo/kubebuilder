@@ -12,7 +12,7 @@ https://kubernetes.io/docs/tasks/extend-kubernetes/custom-resources/custom-resou
 
 以下部分演示了如何在控制器的 Reconcile 方法中注册和触发预删除挂钩。
 
-t要注意的关键点是 finalizers 使对象上的“删除”成为设置删除时间戳的“更新”。
+要注意的关键点是 finalizers 使对象上的“删除”成为设置删除时间戳的“更新”。
 对象上存在删除时间戳记表明该对象正在被删除。否则，在没有 finalizers 的情况下，删除将显示为协调，缓存中缺少该对象。
 
 注意：

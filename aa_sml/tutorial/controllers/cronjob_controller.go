@@ -106,6 +106,7 @@ func (r *CronJobReconciler) Reconcile(ctx context.Context, req ctrl.Request) (ct
 	//当任务进入运行状态或到了下一次执行时间， job 重新排队
 
 	_ = context.Background()
+	// todo 这是唯一的参数 namespace/name
 	log := r.Log.WithValues("cronjob", req.NamespacedName)
 
 	//1: 根据名称加载定时任务
